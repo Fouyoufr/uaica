@@ -21,4 +21,23 @@ const inifr = [
     {tit:'La grenouille de Loveland frappe encore',now:'',dep:0,end:'',pic:'inisbir1.png'},
     {tit:'La grenouille de Loveland frappe encore',now:'',dep:0,end:'',pic:'inisbir1.png'},
     {tit:'La grenouille de Loveland frappe encore',now:'',dep:0,end:'',pic:'inisbir1.png'}
-]
+];
+
+
+const edgeThreshold = 30, minSwipeDistance = 50; // px to qualify as a swipe
+let startX = 0, startY = 0;
+document.addEventListener('touchstart', function(e) { if (e.touches.length !== 1) return; startX = e.touches[0].clientX; startY = e.touches[0].clientY; }, { passive: true });
+document.addEventListener('touchend', function(e) { if (e.changedTouches.length !== 1) return; const endX = e.changedTouches[0].clientX, endY = e.changedTouches[0].clientY, deltaX = endX - startX, deltaY = endY - startY;
+  if (startY <= edgeThreshold && deltaY > minSwipeDistance) {
+  //Swipe form top edge
+    alert ('Swipe from TOP edge detected');  }
+  if (startY >= window.innerHeight - edgeThreshold && deltaY < -minSwipeDistance) {
+  //Swipe form bottom edge
+    alert ('Swipe from BOTTOM edge detected');  }    
+  // Swipe from left edge
+  if (startX <= edgeThreshold && deltaX > minSwipeDistance) {
+    alert('Swipe from LEFT edge detected'); }
+  // Swipe from right edge
+  else if (startX >= window.innerWidth - edgeThreshold && deltaX < -minSwipeDistance) {
+    alert('Swipe from RIGHT edge detected'); }
+  }, { passive: true });
