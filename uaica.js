@@ -45,11 +45,11 @@ document.addEventListener('touchend', function(e) { if (e.changedTouches.length 
 
   function openFullScreen() {
   if (document.requestFullscreen) {
-    document.getElementsByClassName('card')[0].requestFullscreen(); } 
+    document.body.requestFullscreen(); } 
   else if (document.webkitRequestFullscreen) { /* Safari */
-    document.getElementsByClassName('card')[0].webkitRequestFullscreen(); }
+    document.body.webkitRequestFullscreen(); }
   else if (document.msRequestFullscreen) { /* IE11 */
-    document.getElementsByClassName('card')[0].msRequestFullscreen(); }
+    document.body.msRequestFullscreen(); }
   document.getElementById("Fullscreen").style.visibility="hidden";}
   if(!((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height))) {
     //Not in fullscreen : display button to switch !
