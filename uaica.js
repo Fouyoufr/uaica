@@ -52,4 +52,6 @@ document.addEventListener('touchend', function(e) { if (e.changedTouches.length 
     elem.msRequestFullscreen(); }}
   if(!((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height))) {
     //Not in fullscreen : display button to switch !
-    <button onclick="openFulscreen()">Go Fullscreen</button>}
+    //document.getElementById("FullscreenButton").style
+    
+  }
