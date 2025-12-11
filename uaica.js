@@ -50,7 +50,7 @@ document.addEventListener('touchend', function(e) { if (e.changedTouches.length 
     elem.webkitRequestFullscreen(); }
   else if (elem.msRequestFullscreen) { /* IE11 */
     elem.msRequestFullscreen(); }
-  document.getElementById("FullscreenButton").style.visibility="hidden";}
+  document.getElementById("Fullscreen").style.visibility="hidden";}
   if(!((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height))) {
     //Not in fullscreen : display button to switch !
-    document.getElementById("FullscreenButton").style.visibility="visible"; }
+    document.getElementById("Fullscreen").style.visibility="visible"; }
