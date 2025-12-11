@@ -41,3 +41,15 @@ document.addEventListener('touchend', function(e) { if (e.changedTouches.length 
   else if (startX >= window.innerWidth - edgeThreshold && deltaX < -minSwipeDistance) {
     alert('Swipe from RIGHT edge detected'); }
   }, { passive: true });
+
+
+  function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen(); } 
+  else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen(); }
+  else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen(); }}
+  if(!((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height))) {
+    //Not in fullscreen : display button to switch !
+    <button onclick="openFulscreen()">Go Fullscreen</button>}
