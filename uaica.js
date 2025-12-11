@@ -49,9 +49,8 @@ document.addEventListener('touchend', function(e) { if (e.changedTouches.length 
   else if (elem.webkitRequestFullscreen) { /* Safari */
     elem.webkitRequestFullscreen(); }
   else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen(); }}
+    elem.msRequestFullscreen(); }
+  document.getElementById("FullscreenButton").style.visibility="hidden";}
   if(!((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height))) {
     //Not in fullscreen : display button to switch !
-    //document.getElementById("FullscreenButton").style
-    
-  }
+    document.getElementById("FullscreenButton").style.visibility="visible"; }

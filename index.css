@@ -2,3 +2,4 @@ body {background-color: black; padding: 2rem;}
 div.card {width:100%;height:100%;border-radius: 1rem; background-color: gray;color:white}
 div.card div.tit {width:100%;height:10%;background:black}
 div.card div.now {width:100%;height:25%;border-bottom: 1rem black solid;border-top: 1rem black solid; background-color: blanchedalmond;}
+button.Fullscreen {width:100%;height:100%;top:0px;left:0px;text-align:center;font-size:xx-large;visibility: hidden;}
