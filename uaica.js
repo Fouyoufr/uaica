@@ -44,12 +44,12 @@ document.addEventListener('touchend', function(e) { if (e.changedTouches.length 
 
 
   function openFullScreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen(); } 
-  else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen(); }
-  else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen(); }
+  if (document.requestFullscreen) {
+    document.requestFullscreen(); } 
+  else if (document.webkitRequestFullscreen) { /* Safari */
+    document.webkitRequestFullscreen(); }
+  else if (document.msRequestFullscreen) { /* IE11 */
+    document.msRequestFullscreen(); }
   document.getElementById("Fullscreen").style.visibility="hidden";}
   if(!((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height))) {
     //Not in fullscreen : display button to switch !
