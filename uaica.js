@@ -41,16 +41,7 @@ document.addEventListener('touchend', function(e) { if (e.changedTouches.length 
   else if (startX >= window.innerWidth - edgeThreshold && deltaX < -minSwipeDistance) {
     alert('Swipe from RIGHT edge detected'); }
   }, { passive: true });
-
-
-  function openFullScreen() {
-  if (document.requestFullscreen) {
-    document.body.requestFullscreen(); } 
-  else if (document.webkitRequestFullscreen) { /* Safari */
-    document.body.webkitRequestFullscreen(); }
-  else if (document.msRequestFullscreen) { /* IE11 */
-    document.body.msRequestFullscreen(); }
-  document.getElementById("Fullscreen").style.visibility="hidden";}
+  
   if(!((window.fullScreen) || (window.innerWidth == screen.width && window.innerHeight == screen.height))) {
     //Not in fullscreen : display button to switch !
     document.getElementById("Fullscreen").style.visibility="visible"; }

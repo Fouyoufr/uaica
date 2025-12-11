@@ -15,5 +15,5 @@
 
     </div>
 </div>
-<button onclick="openFullScreen()" id="Fullscreen">Go Fullscreen</button>
+<button onclick="if (document.requestFullscreen) { document.body.requestFullscreen(); } else if (document.webkitRequestFullscreen) { document.body.webkitRequestFullscreen(); } else if (document.msRequestFullscreen) { document.body.msRequestFullscreen(); }; document.getElementById('Fullscreen').style.visibility='hidden';" id="Fullscreen">Go Fullscreen</button>
 </body></html>
