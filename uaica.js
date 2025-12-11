@@ -43,7 +43,7 @@ document.addEventListener('touchend', function(e) { if (e.changedTouches.length 
   }, { passive: true });
 
 
-  function openFullscreen() {
+  function openFullScreen() {
   if (elem.requestFullscreen) {
     elem.requestFullscreen(); } 
   else if (elem.webkitRequestFullscreen) { /* Safari */
